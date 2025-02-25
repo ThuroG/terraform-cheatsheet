@@ -22,4 +22,8 @@
 # Terraform documentation links
 - Registry: https://registry.terraform.io/
 - Providers: https://registry.terraform.io/browse/providers
-- Terraform Lifecycle Meta arguments: https://developer.hashicorp.com/terraform/language/meta-arguments/lifecycle 
+- Lifecycle Meta arguments: https://developer.hashicorp.com/terraform/language/meta-arguments/lifecycle 
+- Depends On Meta arguments: https://developer.hashicorp.com/terraform/language/meta-arguments/depends_on
+- Count Meta argument: https://developer.hashicorp.com/terraform/language/meta-arguments/count 
+- For Each argument: https://developer.hashicorp.com/terraform/language/meta-arguments/for_each 
+- Datasources (used for READ data): https://developer.hashicorp.com/terraform/language/data-sources 
