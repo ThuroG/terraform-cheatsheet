@@ -7,6 +7,8 @@
 1. Initialize Terraform Configuration file and / or download new providers ```terraform init```
 2. See the Blueprint of Terraform Configuration - what is going to be changed ```terraform plan```
 3. Apply the changes on the infrastructure. Confirm with 'yes' ```terraform apply```
+- Apply changes and overwrite variables (highest priority for overwrite) ```terraform apply var "filename= filename=/root/pets.txt " var "content= We love Pets!Pets!" var "prefix= Mrs " var "separator= separator=.." var "length= 2```
+- Also possible to set Environment Variable with Prefix 'TF_VAR_VarName' ```export TF_VAR_filename ="="/root/pets.txt```
 - Validate Syntax of Terraform Configuration File. Should be done before apply! ```terraform validate```
 - Display all output variables of the Terraform Configuration ```terraform output```
 - Display only desired output variable of Terraform Configuration ```terraform output <variablename>```
