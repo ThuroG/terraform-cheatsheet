@@ -29,6 +29,8 @@
 - Example how Terraform State can be used in JQuery: ```terraform show -json | jq '.values.root_module.resources[] | select(.type == "aws_instance" and .name == "jade-mw")'```
 - Terraform get command for Module ```terraform get```
 - Use Console command to test logic of functions in tf files ```terraform console```
+- How to use a value from a default map (variable) when working with terraform workspace ```ami = lookup(var.ami, terraform.workspace)```
+- Apply on a workspace (has to be done on EVERY workspace individually)```terraform workspace select us-payroll; terraform apply```
 
 # Terraform documentation links
 - Registry: https://registry.terraform.io/
