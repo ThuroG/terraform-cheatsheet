@@ -21,6 +21,7 @@
 - Show the resource dependencies graphically ```terraform graph | dot -Tpng > graph.png``
 - Taint a ressource for recreation ```terraform taint resouce_type.resource_name```
 - Untaint a ressource to avoid recreation ```terraform untaint resouce_type.resource_name```
+- ALTERNATIVE for TAINT which is preferred: ```terraform apply -replace="aws_instance.example[0]"```
 - Set LogLevel with Env Variable ```export TF_LOG=<LogLevel>```
 - Define file where logs are stored with Env Variable ```export TF_LOG_PATH=/tmp/terraform.log```
 - Unset Log path to destroy logs ```unset TF_LOG_PATH```
@@ -28,7 +29,7 @@
 - Create a key pair for AWS EC2 (Example): ```aws ec2 create-key-pair --endpoint http://aws:4566 --key-name jade --query 'KeyMaterial' --output text > /root/terraform-projects/project-jade/jade.pem```
 - Example how Terraform State can be used in JQuery: ```terraform show -json | jq '.values.root_module.resources[] | select(.type == "aws_instance" and .name == "jade-mw")'```
 - Terraform get command for Module ```terraform get```
-- Use Console command to test logic of functions in tf files ```terraform console```
+- Use Console command to test logic of functions in tf files or lookups ```terraform console```
 - How to use a value from a default map (variable) when working with terraform workspace ```ami = lookup(var.ami, terraform.workspace)```
 - Apply on a workspace (has to be done on EVERY workspace individually)```terraform workspace select us-payroll; terraform apply```
 - Show terraform command as json ```terraform show -json```
@@ -45,7 +46,7 @@
 - AWS Provider: https://registry.terraform.io/providers/hashicorp/aws/latest/docs
 - Remote State: https://developer.hashicorp.com/terraform/language/state/remote-state-data
 - How to set up: https://spacelift.io/blog/terraform-remote-state 
-- Taint: https://developer.hashicorp.com/terraform/cli/commands/taint 
+- Taint (alternative is preferred): https://developer.hashicorp.com/terraform/cli/commands/taint 
 - Provisioners (should be avoided if not needed and other methods used like aws_instance.user_data): https://developer.hashicorp.com/terraform/language/resources/provisioners/syntax
 - Import unmanaged resources to terraform so that terraform manages it: https://developer.hashicorp.com/terraform/cli/import
 - Modules: https://developer.hashicorp.com/terraform/language/modules
@@ -54,4 +55,8 @@
 - Terraform functions: https://spacelift.io/blog/terraform-functions-expressions-loops 
 - Terraform Workspaces: https://spacelift.io/blog/terraform-workspaces
 - Terraform state commands: https://developer.hashicorp.com/terraform/cli/commands/state
+- Terraform refresh command: https://developer.hashicorp.com/terraform/cli/commands/refresh
+- Terraform Graph command to display visually the infrastructure: https://developer.hashicorp.com/terraform/cli/commands/graph
+- Correct Debugging in Terraform: https://developer.hashicorp.com/terraform/internals/debugging
+
 
