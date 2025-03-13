@@ -53,4 +53,5 @@
 - Test functions / logic of terraform file: https://spacelift.io/blog/terraform-console
 - Terraform functions: https://spacelift.io/blog/terraform-functions-expressions-loops 
 - Terraform Workspaces: https://spacelift.io/blog/terraform-workspaces
+- Terraform state commands: https://developer.hashicorp.com/terraform/cli/commands/state
 
