@@ -31,6 +31,8 @@
 - Use Console command to test logic of functions in tf files ```terraform console```
 - How to use a value from a default map (variable) when working with terraform workspace ```ami = lookup(var.ami, terraform.workspace)```
 - Apply on a workspace (has to be done on EVERY workspace individually)```terraform workspace select us-payroll; terraform apply```
+- Show terraform command as json ```terraform show -json```
+
 
 # Terraform documentation links
 - Registry: https://registry.terraform.io/
