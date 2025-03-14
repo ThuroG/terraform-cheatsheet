@@ -58,5 +58,6 @@
 - Terraform refresh command: https://developer.hashicorp.com/terraform/cli/commands/refresh
 - Terraform Graph command to display visually the infrastructure: https://developer.hashicorp.com/terraform/cli/commands/graph
 - Correct Debugging in Terraform: https://developer.hashicorp.com/terraform/internals/debugging
+- IMPORTANT: File and Templatefile function cannot be used for generated files by terraform. It is used to validate BEFORE the execution: https://developer.hashicorp.com/terraform/language/expressions/function-calls#when-terraform-calls-functions
 
 
